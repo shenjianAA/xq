@@ -1,0 +1,47 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container">
+    <h1 class="text-center">我的收藏</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>收藏信息</th>
+                <th>收藏时间</th>
+                <th>收藏人</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="tmp in myOrder">
+                <td>{{tmp.oid}}</td>
+                <td>
+                    <a href="#/kflDetail">
+                        <img ng-src="img/{{tmp.img_sm}}">
+                    </a>
+                </td>
+                <td>{{tmp.order_time | date:"yyyy-MM-dd"}}</td>
+                <td>{{tmp.user_name}}</td>
+            </tr>
+            <!--<tr>-->
+                <!--<td>1</td>-->
+                <!--<td>-->
+                    <!--<a href="#/kflDetail">-->
+                        <!--<img src="img/p0281.jpg">-->
+                    <!--</a>-->
+                <!--</td>-->
+                <!--<td>2011-11-11</td>-->
+                <!--<td>cc</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>1</td>-->
+                <!--<td>-->
+                    <!--<a href="#/kflDetail">-->
+                        <!--<img src="img/p0281.jpg">-->
+                    <!--</a>-->
+                <!--</td>-->
+                <!--<td>2011-11-11</td>-->
+                <!--<td>cc</td>-->
+            <!--</tr>-->
+        </tbody>
+    </table>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

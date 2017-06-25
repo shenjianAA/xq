@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html ng-app="kfl">
+<head lang="zh-cn">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/kaifanla.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/kaifanla.js"></script>
+    <style>
+        .slow{
+            animation-duration:3s;
+        }
+        img[ng-src='img/5_l.jpg']{
+            width:500px;
+        }
+    </style>
+</head>
+<body ng-controller="parentCtrl">
+    <div ng-view></div>
+    <!--注册-->
+    <div class="modal" id="modal-reg">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" ng-click="close()" ><span>&times;</span></button>
+                    <h4>请注册</h4>
+                    <p class="alert">
+                        请在此处输入您的注册信息。
+                    </p>
+                    <form id="register-form">
+                        <input type="text" placeholder="请输入用户名" name="uname" value="qiangdong" ng-model="uname">
+                        <input type="password" placeholder="请输入密码" name="upwd" value="123456"  ng-model="upwd">
+                        <input type="button" value="提交注册信息" ng-click="btnreg()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--登录-->
+    <div class="modal" id="modal-log">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" ng-click="close()"><span>&times;</span></button>
+                    <h4>请登录</h4>
+                    <p class="alert">
+                        请在此处输入您的登录信息。
+                    </p>
+                    <form id="login-form">
+                        <input type="text" placeholder="请输入用户名" name="uname" value="qiangdong" ng-model="uname">
+                        <input type="password" placeholder="请输入密码" name="upwd" value="123456"
+                               ng-model="upwd">
+                        <input type="button" value="提交登录信息" ng-click="btnlog()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
